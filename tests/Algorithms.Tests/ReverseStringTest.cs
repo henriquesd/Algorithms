@@ -44,5 +44,20 @@ namespace Algorithms.Tests
 
             Assert.Equal(result, strExpected);
         }
+
+        [Theory]
+        [InlineData("hello reverse", "olleh esrever")]
+        [InlineData("hello reverse string", "olleh esrever gnirts")]
+        [InlineData("level wow", "level wow")]
+        [InlineData("a ?", "a ?")]
+        [InlineData("", null)]
+        [InlineData(" ", null)]
+        [InlineData(null, null)]
+        public void ReverseEachWord_ShouldReverseWords(string str, string strExpected)
+        {
+            var result = ReverseString.ReverseEachWord(str);
+
+            Assert.Equal(result, strExpected);
+        }
     }
 }

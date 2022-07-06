@@ -31,5 +31,27 @@ namespace Algorithms
 
             return reversedString.ToString();
         }
+
+        public static string? ReverseEachWord(string str)
+        {
+            if (string.IsNullOrEmpty(str?.Trim())) return null;
+
+            StringBuilder reversedString = new StringBuilder(str.Length);
+
+            String[] arr = str.Split(" ");
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                reversedString.Append(Reverse(arr[i]));
+
+                // If it is the last word, should not add extra space;
+                if (i != arr.Length -1)
+                {
+                    reversedString.Append(" ");
+                }
+            }
+
+            return reversedString.ToString();
+        }
     }
 }
