@@ -94,5 +94,79 @@ namespace Algorithms.Tests.LinkedLists
 
             Assert.Equal(expectedValue, result);
         }
+
+        [Theory]
+        [InlineData(2, true)]
+        [InlineData(6, false)]
+        public void Remove_ShouldReturnExpectedValue(int value, bool expectedValue)
+        {
+            DoublyLinkedList<int> doublyLinkedList = new DoublyLinkedList<int>();
+            for (int i = 1; i <= 5; i++)
+            {
+                doublyLinkedList.AddTail(i);
+            }
+
+            var result = doublyLinkedList.Remove(value);
+
+            Assert.Equal(expectedValue, result);
+        }
+
+        [Fact]
+        public void Remove_ShouldRemoveCorrectNode_WhenThreeNodesExists()
+        {
+            DoublyLinkedList<int> doublyLinkedList = new DoublyLinkedList<int>();
+            for (int i = 1; i <= 3; i++)
+            {
+                doublyLinkedList.AddTail(i);
+            }
+
+            // Before removing
+            // 1        2       3
+            // null <- prev <- prev
+            // next -> next -> null
+
+            doublyLinkedList.Remove(2);
+
+            // Result:
+            // 1        3
+            // null <- prev
+            // next -> null
+            Assert.Equal(2, doublyLinkedList.Count);
+            Assert.Equal(3, doublyLinkedList.Tail.Value);
+            Assert.Equal(1, doublyLinkedList.Tail.Previous.Value);
+            Assert.Null(doublyLinkedList.Tail.Next);
+            Assert.Null(doublyLinkedList.Head.Previous);
+            Assert.Equal(1, doublyLinkedList.Head.Value);
+            Assert.Equal(3, doublyLinkedList.Head.Next.Value);
+        }
+
+        [Fact]
+        public void Remove_ShouldRemoveCorrectNode_WhenFiveNodesExist()
+        {
+            DoublyLinkedList<int> doublyLinkedList = new DoublyLinkedList<int>();
+            for (int i = 1; i <= 5; i++)
+            {
+                doublyLinkedList.AddTail(i);
+            }
+
+            // Before removing
+            // 1        2       3       4       5
+            // null <- prev <- prev <- prev <- prev
+            // next -> next -> next -> next -> null
+
+            doublyLinkedList.Remove(3);
+
+            // Result:
+            // 1        2       4       5
+            // null <- prev <- prev <- prev
+            // next -> next -> next -> null
+            Assert.Equal(4, doublyLinkedList.Count);
+            Assert.Equal(5, doublyLinkedList.Tail.Value);
+            Assert.Equal(4, doublyLinkedList.Tail.Previous.Value);
+            Assert.Null(doublyLinkedList.Tail.Next);
+            Assert.Null(doublyLinkedList.Head.Previous);
+            Assert.Equal(1, doublyLinkedList.Head.Value);
+            Assert.Equal(2, doublyLinkedList.Head.Next.Value);
+        }
     }
 }
