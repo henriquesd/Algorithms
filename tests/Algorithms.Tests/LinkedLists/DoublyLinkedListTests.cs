@@ -47,7 +47,52 @@ namespace Algorithms.Tests.LinkedLists
             Assert.Null(doublyLinkedList.Head.Previous);
             Assert.Equal(1, doublyLinkedList.Head.Value);
             Assert.Equal(2, doublyLinkedList.Head.Next.Value);
-            
+        }
+
+        [Fact]
+        public void Find_ShouldReturnSearchedValue_WhenValueExists()
+        {
+            DoublyLinkedList<int> doublyLinkedList = new DoublyLinkedList<int>();
+            for (int i = 1; i <= 5; i++)
+            {
+                doublyLinkedList.AddTail(i);
+            }
+
+            var result = doublyLinkedList.Find(doublyLinkedList.Tail.Value);
+
+            Assert.Equal(5, result.Value);
+            Assert.Equal(4, result.Previous.Value);
+            Assert.Null(result.Next);
+        }
+
+        [Fact]
+        public void Find_ShouldReturnNull_WhenSearchedValueDoesNotExist()
+        {
+            DoublyLinkedList<int> doublyLinkedList = new DoublyLinkedList<int>();
+            for (int i = 1; i <= 5; i++)
+            {
+                doublyLinkedList.AddTail(i);
+            }
+
+            var result = doublyLinkedList.Find(6);
+
+            Assert.Null(result);
+        }
+
+        [Theory]
+        [InlineData(2, true)]
+        [InlineData(6, false)]
+        public void Contains_ShouldReturnExpectedValue(int value, bool expectedValue)
+        {
+            DoublyLinkedList<int> doublyLinkedList = new DoublyLinkedList<int>();
+            for (int i = 1; i <= 5; i++)
+            {
+                doublyLinkedList.AddTail(i);
+            }
+
+            var result = doublyLinkedList.Contains(value);
+
+            Assert.Equal(expectedValue, result);
         }
     }
 }
