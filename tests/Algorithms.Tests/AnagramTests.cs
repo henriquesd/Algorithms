@@ -2,7 +2,7 @@
 
 namespace Algorithms.Tests
 {
-    public class AnagramTest
+    public class AnagramTests
     {
         [Theory]
         [InlineData("abc", "cba", true)]

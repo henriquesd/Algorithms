@@ -1,13 +1,13 @@
 ﻿namespace Algorithms
 {
-    public static class RemoveRepeatedValuesFromArray
+    public static class RemoveRepeatedValues
     {
-        public static int[] RemoveDuplicatesFromSortedArray(int[] nums)
+        public static int[] RemoveDuplicatesFromSortedArray(int[] arrayWithDuplicatedValues)
         {
-            if (nums is null || nums.Length == 0) return new int[0];
+            if (arrayWithDuplicatedValues is null || arrayWithDuplicatedValues.Length == 0) return new int[0];
             // Array.Sort(nums);
 
-            int n = nums.Length;
+            int arrayLength = arrayWithDuplicatedValues.Length;
 
             // pointer to last non-duplicate element;
             int pointer = 0;
@@ -17,28 +17,28 @@
             // If the two elements are different, it increments the pointer and assigns the current element to
             //  the position pointed by the pointer in the modified array.
             // This way, the modified array contains only the unique elements of the input array.
-            for (int i = 1; i < n; i++)
+            for (int i = 1; i < arrayLength; i++)
             {
-                if (nums[i] != nums[pointer])
+                if (arrayWithDuplicatedValues[i] != arrayWithDuplicatedValues[pointer])
                 {
                     pointer++;
-                    nums[pointer] = nums[i];
+                    arrayWithDuplicatedValues[pointer] = arrayWithDuplicatedValues[i];
                 }
             }
 
             int[] result = new int[pointer + 1];
-            Array.Copy(nums, result, pointer + 1);
+            Array.Copy(arrayWithDuplicatedValues, result, pointer + 1);
 
             return result;
         }
 
-        public static int[] RemoveRepeatedValues(int[] nums)
+        public static int[] RemoveRepeatedValuesFromArray(int[] arrayWithRepeatedValues)
         {
-            if (nums == null || nums.Length == 0) return new int[0];
+            if (arrayWithRepeatedValues == null || arrayWithRepeatedValues.Length == 0) return new int[0];
 
             // HashSet is an efficient data structure in C# for checking for duplicates;
             HashSet<int> set = new HashSet<int>();
-            foreach (int num in nums)
+            foreach (int num in arrayWithRepeatedValues)
             {
                 set.Add(num);
             }
@@ -49,11 +49,11 @@
             return uniqueList.ToArray();
         }
 
-        public static int[] RemoveRepeatedValuesWithLinq(int[] nums)
+        public static int[] RemoveRepeatedValuesWithLinq(int[] arrayWithDuplicatedValues)
         {
-            if (nums is null || nums.Length == 0) return new int[0];
+            if (arrayWithDuplicatedValues is null || arrayWithDuplicatedValues.Length == 0) return new int[0];
 
-            int[] distinctList = nums.Distinct().ToArray();
+            int[] distinctList = arrayWithDuplicatedValues.Distinct().ToArray();
 
             return distinctList;
         }

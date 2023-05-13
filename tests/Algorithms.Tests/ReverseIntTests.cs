@@ -2,7 +2,7 @@
 
 namespace Algorithms.Tests
 {
-    public class ReverseIntTest
+    public class ReverseIntTests
     {
         [Theory]
         [InlineData(15, 51)]
@@ -14,7 +14,7 @@ namespace Algorithms.Tests
         {
             var result = ReverseInt.Reverse(number);
 
-            Assert.Equal(result, expectedNumber);
+            Assert.Equal(expectedNumber, result);
         }
     }
 }

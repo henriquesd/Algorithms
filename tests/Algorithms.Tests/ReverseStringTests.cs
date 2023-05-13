@@ -2,28 +2,28 @@
 
 namespace Algorithms.Tests
 {
-    public class ReverseStringTest
+    public class ReverseStringTests
     {
         [Theory]
         [InlineData("apple", "elppa")]
         [InlineData("hello", "olleh")]
         [InlineData("  abc", "cba  ")]
-        public void Reverse_ShouldReverseString(string str, string strExpected)
+        public void Reverse_ShouldReverseString(string text, string expectedText)
         {
-            var result = ReverseString.Reverse(str);
+            var result = ReverseString.Reverse(text);
 
-            Assert.Equal(result, strExpected);
+            Assert.Equal(expectedText, result);
         }
 
         [Theory]
         [InlineData("apple", "elppa")]
         [InlineData("hello", "olleh")]
         [InlineData("  abc", "cba  ")]
-        public void ReverseUsingLinq_ShouldReverseString(string str, string strExpected)
+        public void ReverseUsingLinq_ShouldReverseString(string text, string expectedText)
         {
-            var result = ReverseString.ReverseUsingLinq(str);
+            var result = ReverseString.ReverseUsingLinq(text);
 
-            Assert.Equal(result, strExpected);
+            Assert.Equal(expectedText, result);
         }
 
         [Theory]
@@ -38,11 +38,11 @@ namespace Algorithms.Tests
         [InlineData("", null)]
         [InlineData(" ", null)]
         [InlineData(null, null)]
-        public void ReverseWithStringBuilder_ShouldReverseString(string str, string strExpected)
+        public void ReverseWithStringBuilder_ShouldReverseString(string text, string expectedText)
         {
-            var result = ReverseString.ReverseWithStringBuilder(str);
+            var result = ReverseString.ReverseWithStringBuilder(text);
 
-            Assert.Equal(result, strExpected);
+            Assert.Equal(expectedText, result);
         }
 
         [Theory]
@@ -53,11 +53,11 @@ namespace Algorithms.Tests
         [InlineData("", null)]
         [InlineData(" ", null)]
         [InlineData(null, null)]
-        public void ReverseEachWord_ShouldReverseWords(string str, string strExpected)
+        public void ReverseEachWord_ShouldReverseWords(string text, string expectedText)
         {
-            var result = ReverseString.ReverseEachWord(str);
+            var result = ReverseString.ReverseEachWord(text);
 
-            Assert.Equal(result, strExpected);
+            Assert.Equal(expectedText, result);
         }
     }
 }

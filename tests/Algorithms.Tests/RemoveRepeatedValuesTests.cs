@@ -2,7 +2,7 @@
 
 namespace Algorithms.Tests
 {
-    public class RemoveRepeatedValuesFromArrayTest
+    public class RemoveRepeatedValuesTests
     {
         [Theory]
         [InlineData(new int[] { 1, 1, 2, 3, 4, 5 }, new int[] { 1, 2, 3, 4, 5 })]
@@ -12,11 +12,11 @@ namespace Algorithms.Tests
         [InlineData(new int[] { 1, 2, 3 }, new int[] { 1, 2, 3 })]
         [InlineData(new int[] { }, new int[] { })]
         [InlineData(null, new int[] { })]
-        public void RemoveDuplicatesFromSortedArray_ShouldReturnArrayWithoutDuplicatedValues(int[] arrayWithDuplicatedValues, int[] expectedArrayWithoutDuplicatedValues)
+        public void RemoveDuplicatesFromSortedArray_ShouldReturnArrayWithoutDuplicatedValues(int[] arrayWithDuplicatedValues, int[] expectedResult)
         {
-            var result = RemoveRepeatedValuesFromArray.RemoveDuplicatesFromSortedArray(arrayWithDuplicatedValues);
+            var result = RemoveRepeatedValues.RemoveDuplicatesFromSortedArray(arrayWithDuplicatedValues);
 
-            Assert.Equal(expectedArrayWithoutDuplicatedValues, result);
+            Assert.Equal(expectedResult, result);
         }
 
         [Theory]
@@ -27,11 +27,11 @@ namespace Algorithms.Tests
         [InlineData(new int[] { 1, 2, 3 }, new int[] { 1, 2, 3 })]
         [InlineData(new int[] { }, new int[] { })]
         [InlineData(null, new int[] { })]
-        public void RemoveRepeatedValues_ShouldReturnArrayWithoutRepeatedValues(int[] arrayWithDuplicatedValues, int[] expectedArrayWithoutDuplicatedValues)
+        public void RemoveRepeatedValues_ShouldReturnArrayWithoutRepeatedValues(int[] arrayWithDuplicatedValues, int[] expectedResult)
         {
-            var result = RemoveRepeatedValuesFromArray.RemoveRepeatedValues(arrayWithDuplicatedValues);
+            var result = RemoveRepeatedValues.RemoveRepeatedValuesFromArray(arrayWithDuplicatedValues);
 
-            Assert.Equal(expectedArrayWithoutDuplicatedValues, result);
+            Assert.Equal(expectedResult, result);
         }
 
         [Theory]
@@ -42,11 +42,11 @@ namespace Algorithms.Tests
         [InlineData(new int[] { 1, 2, 3 }, new int[] { 1, 2, 3 })]
         [InlineData(new int[] { }, new int[] { })]
         [InlineData(null, new int[] { })]
-        public void RemoveRepeatedValuesWithLinq_ShouldReturnArrayWithoutRepeatedValues(int[] arrayWithDuplicatedValues, int[] expectedArrayWithoutDuplicatedValues)
+        public void RemoveRepeatedValuesWithLinq_ShouldReturnArrayWithoutRepeatedValues(int[] arrayWithDuplicatedValues, int[] expectedResult)
         {
-            var result = RemoveRepeatedValuesFromArray.RemoveRepeatedValuesWithLinq(arrayWithDuplicatedValues);
+            var result = RemoveRepeatedValues.RemoveRepeatedValuesWithLinq(arrayWithDuplicatedValues);
 
-            Assert.Equal(expectedArrayWithoutDuplicatedValues, result);
+            Assert.Equal(expectedResult, result);
         }
     }
 }

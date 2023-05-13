@@ -2,7 +2,7 @@
 
 namespace Algorithms.Tests
 {
-    public class PalindromesTest
+    public class PalindromesTests
     {
         [Theory]
         [InlineData("abba", true)]
@@ -11,7 +11,7 @@ namespace Algorithms.Tests
         {
             var result = Palindromes.IsPalindrome(str);
 
-            Assert.Equal(result, expectedValue);
+            Assert.Equal(expectedValue, result);
         }
 
         [Theory]
@@ -21,7 +21,7 @@ namespace Algorithms.Tests
         {
             var result = Palindromes.IsPalindromeUsingLinq(str);
 
-            Assert.Equal(result, expectedValue);
+            Assert.Equal(expectedValue, result);
         }
     }
 }

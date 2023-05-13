@@ -2,7 +2,7 @@
 
 namespace Algorithms.Tests
 {
-    public class BinarySearchTest
+    public class BinarySearchTests
     {
         [Theory]
         [InlineData(new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 }, 1, 0)]
@@ -14,7 +14,7 @@ namespace Algorithms.Tests
         {
             var result = BinarySearch.FindNumberPositionInSortedArray(inputArray, searchedNumber);
 
-            Assert.Equal(result, expectedPosition);
+            Assert.Equal(expectedPosition, result);
         }
     }
 }

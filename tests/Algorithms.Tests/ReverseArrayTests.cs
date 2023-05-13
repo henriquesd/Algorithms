@@ -16,7 +16,7 @@ namespace Algorithms.Tests
         {
             var result = ReverseArray.ReverseArrayIntoNewArray(inputArray);
 
-            Assert.Equal(result, expectedArray);
+            Assert.Equal(expectedArray, result);
         }
     }
 }
