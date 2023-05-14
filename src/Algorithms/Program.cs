@@ -13,10 +13,22 @@ namespace Algorithms
     [MarkdownExporter]
     public class AlgorithmsProgram
     {
-        [Benchmark(Description = "FizzBuzz")]
-        public void RunFizzBuzz()
+        [Benchmark(Description = "FizzBuzz Example 1")]
+        public void RunFizzBuzzExample1()
         {
-            FizzBuzz.Execute(15);
+            FizzBuzz.ExecuteExample1(15);
+        }
+
+        [Benchmark(Description = "FizzBuzz Example 2")]
+        public void RunFizzBuzz2()
+        {
+            FizzBuzz.ExecuteExample2(15);
+        }
+
+        [Benchmark(Description = "FizzBuzz Example 3")]
+        public void RunFizzBuzzExample3()
+        {
+            FizzBuzz.ExecuteExample3(15);
         }
 
         [Benchmark(Description = "Anagram")]

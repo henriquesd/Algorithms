@@ -1,7 +1,4 @@
-﻿using System;
-using System.Linq;
-
-namespace Algorithms
+﻿namespace Algorithms
 {
     public static class Palindromes
     {
