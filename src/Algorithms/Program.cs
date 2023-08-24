@@ -120,5 +120,18 @@ namespace Algorithms
         {
             SmallestPositiveValue.ExecuteWithSortedArray(new int[] { 1, 3, 4, 6, 2 });
         }
+
+        [Benchmark(Description = "DiagonalDifference-MatrixDiagonalDifference")]
+        public void RunDiagonalDifference()
+        {
+            List<List<int>> matrix = new List<List<int>>
+            {
+                new List<int> { 1, 2, 3 },
+                new List<int> { 4, 5, 6 },
+                new List<int> { 9, 8, 9 }
+            };
+
+            DiagonalDifference.MatrixDiagonalDifference(matrix);
+        }
     }
 }
