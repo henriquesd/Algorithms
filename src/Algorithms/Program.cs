@@ -133,5 +133,17 @@ namespace Algorithms
 
             DiagonalDifference.MatrixDiagonalDifference(matrix);
         }
+
+        [Benchmark(Description = "Staircase-Execute")]
+        public void Staircase1()
+        {
+            Staircase.ExecuteExample1(7);
+        }
+
+        [Benchmark(Description = "Staircase-Execute2")]
+        public void Staircase2()
+        {
+            Staircase.ExecuteExample2(7);
+        }
     }
 }
