@@ -145,5 +145,23 @@ namespace Algorithms
         {
             Staircase.ExecuteExample2(7);
         }
+
+        [Benchmark(Description = "MiniMaxSum-ExecuteMiniMaxSumList")]
+        public void MiniMaxSumExecuteMiniMaxSumList()
+        {
+            MiniMaxSum.ExecuteMiniMaxSumList(new List<int> { 5, 1, 3, 9, 7 });
+        }
+
+        [Benchmark(Description = "MiniMaxSum-ExecuteMiniMaxSumArray")]
+        public void MiniMaxSumExecuteMiniMaxSumArray()
+        {
+            MiniMaxSum.ExecuteMiniMaxSumArray(new int[] { 5, 1, 3, 9, 7 });
+        }
+
+        [Benchmark(Description = "MiniMaxSum-ExecuteMiniMaxSumWithLinq")]
+        public void MiniMaxSumExecuteExecuteMiniMaxSumWithLinq()
+        {
+            MiniMaxSum.ExecuteMiniMaxSumWithLinq(new List<int> { 5, 1, 3, 9, 7 });
+        }
     }
 }
