@@ -175,5 +175,17 @@ namespace Algorithms
         {
             RepeatedNumberArray.CountMostRepeatedNumberWithDictionary(new int[] { 3, 2, 1, 3, 7, 3 });
         }
+
+        [Benchmark(Description = "MergeArrays-Merge1")]
+        public void MergeArraysMerge1()
+        {
+            MergeArrays.Merge1(new int[] { 1, 2, 3, 0, 0, 0 }, new int[] { 2, 5, 6 });
+        }
+
+        [Benchmark(Description = "MergeArrays-Merge2")]
+        public void MergeArraysMerge2()
+        {
+            MergeArrays.Merge2(new int[] { 1, 2, 3, 0, 0, 0 }, 3, new int[] { 2, 5, 6 }, 3);
+        }
     }
 }
