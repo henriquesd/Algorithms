@@ -163,5 +163,17 @@ namespace Algorithms
         {
             MiniMaxSum.ExecuteMiniMaxSumWithLinq(new List<int> { 5, 1, 3, 9, 7 });
         }
+
+        [Benchmark(Description = "RepeatedNumberArray-CountMostRepeatedNumberWithTuple")]
+        public void RepeatedNumberArrayCountMostRepeatedNumberWithTuple()
+        {
+            RepeatedNumberArray.CountMostRepeatedNumberWithTuple(new int[] { 3, 2, 1, 3, 7, 3 });
+        }
+
+        [Benchmark(Description = "RepeatedNumberArray-CountMostRepeatedNumberWithDictionary")]
+        public void RepeatedNumberArrayCountMostRepeatedNumberWithDictionary()
+        {
+            RepeatedNumberArray.CountMostRepeatedNumberWithDictionary(new int[] { 3, 2, 1, 3, 7, 3 });
+        }
     }
 }
