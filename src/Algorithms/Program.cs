@@ -49,25 +49,25 @@ namespace Algorithms
             Palindromes.IsPalindrome("abba");
         }
 
-        [Benchmark(Description = "Palindromes-IsPalindromeUsingLinq")]
+        [Benchmark(Description = "Palindromes IsPalindromeUsingLinq")]
         public void RunPalindromesUsingLinq()
         {
             Palindromes.IsPalindromeUsingLinq("abba");
         }
 
-        [Benchmark(Description = "RemoveRepeatedValues-RemoveDuplicatesFromSortedArray")]
+        [Benchmark(Description = "RemoveRepeatedValues RemoveDuplicatesFromSortedArray")]
         public void RunRemoveRepeatedValues()
         {
             RemoveRepeatedValues.RemoveDuplicatesFromSortedArray(new int[] { 1, 1, 2, 2, 2, 3, 4, 5 });
         }
 
-        [Benchmark(Description = "RemoveRepeatedValues-RemoveRepeatedValuesFromArray")]
+        [Benchmark(Description = "RemoveRepeatedValues RemoveRepeatedValuesFromArray")]
         public void RunRemoveRepeatedValuesFromArray()
         {
             RemoveRepeatedValues.RemoveRepeatedValuesFromArray(new int[] { 1, 1, 2, 2, 2, 3, 4, 5 });
         }
 
-        [Benchmark(Description = "RemoveRepeatedValues-RemoveRepeatedValuesWithLinq")]
+        [Benchmark(Description = "RemoveRepeatedValues RemoveRepeatedValuesWithLinq")]
         public void RunRemoveRepeatedValuesWithLinq()
         {
             RemoveRepeatedValues.RemoveRepeatedValuesWithLinq(new int[] { 1, 1, 2, 2, 2, 3, 4, 5 });
@@ -91,13 +91,13 @@ namespace Algorithms
             ReverseString.Reverse("reverse string");
         }
 
-        [Benchmark(Description = "ReverseString-ReverseUsingLinq")]
+        [Benchmark(Description = "ReverseString ReverseUsingLinq")]
         public void RunReverseStringReverseUsingLinq()
         {
             ReverseString.ReverseUsingLinq("reverse string");
         }
 
-        [Benchmark(Description = "ReverseString-ReverseWithStringBuilder")]
+        [Benchmark(Description = "ReverseString ReverseWithStringBuilder")]
         public void RunReverseStringReverseWithStringBuilder()
         {
             ReverseString.ReverseWithStringBuilder("reverse string");
@@ -109,19 +109,19 @@ namespace Algorithms
             ReverseString.ReverseEachWord("reverse string");
         }
 
-        [Benchmark(Description = "SmallestPositiveValue-Execute")]
+        [Benchmark(Description = "SmallestPositiveValue Execute")]
         public void RunSmallestPositiveValue()
         {
             SmallestPositiveValue.Execute(new int[] { 1, 3, 4, 6, 2 });
         }
 
-        [Benchmark(Description = "SmallestPositiveValue-ExecuteWithSortedArray")]
+        [Benchmark(Description = "SmallestPositiveValue ExecuteWithSortedArray")]
         public void RunSmallestPositiveValueWithSortedArray()
         {
             SmallestPositiveValue.ExecuteWithSortedArray(new int[] { 1, 3, 4, 6, 2 });
         }
 
-        [Benchmark(Description = "DiagonalDifference-MatrixDiagonalDifference")]
+        [Benchmark(Description = "DiagonalDifference MatrixDiagonalDifference")]
         public void RunDiagonalDifference()
         {
             List<List<int>> matrix = new List<List<int>>
@@ -134,58 +134,70 @@ namespace Algorithms
             DiagonalDifference.MatrixDiagonalDifference(matrix);
         }
 
-        [Benchmark(Description = "Staircase-Execute")]
+        [Benchmark(Description = "Staircase Execute")]
         public void Staircase1()
         {
             Staircase.ExecuteExample1(7);
         }
 
-        [Benchmark(Description = "Staircase-Execute2")]
+        [Benchmark(Description = "Staircase Execute2")]
         public void Staircase2()
         {
             Staircase.ExecuteExample2(7);
         }
 
-        [Benchmark(Description = "MiniMaxSum-ExecuteMiniMaxSumList")]
+        [Benchmark(Description = "MiniMaxSum ExecuteMiniMaxSumList")]
         public void MiniMaxSumExecuteMiniMaxSumList()
         {
             MiniMaxSum.ExecuteMiniMaxSumList(new List<int> { 5, 1, 3, 9, 7 });
         }
 
-        [Benchmark(Description = "MiniMaxSum-ExecuteMiniMaxSumArray")]
+        [Benchmark(Description = "MiniMaxSum ExecuteMiniMaxSumArray")]
         public void MiniMaxSumExecuteMiniMaxSumArray()
         {
             MiniMaxSum.ExecuteMiniMaxSumArray(new int[] { 5, 1, 3, 9, 7 });
         }
 
-        [Benchmark(Description = "MiniMaxSum-ExecuteMiniMaxSumWithLinq")]
+        [Benchmark(Description = "MiniMaxSum ExecuteMiniMaxSumWithLinq")]
         public void MiniMaxSumExecuteExecuteMiniMaxSumWithLinq()
         {
             MiniMaxSum.ExecuteMiniMaxSumWithLinq(new List<int> { 5, 1, 3, 9, 7 });
         }
 
-        [Benchmark(Description = "RepeatedNumberArray-CountMostRepeatedNumberWithTuple")]
+        [Benchmark(Description = "RepeatedNumberArray CountMostRepeatedNumberWithTuple")]
         public void RepeatedNumberArrayCountMostRepeatedNumberWithTuple()
         {
             RepeatedNumberArray.CountMostRepeatedNumberWithTuple(new int[] { 3, 2, 1, 3, 7, 3 });
         }
 
-        [Benchmark(Description = "RepeatedNumberArray-CountMostRepeatedNumberWithDictionary")]
+        [Benchmark(Description = "RepeatedNumberArray CountMostRepeatedNumberWithDictionary")]
         public void RepeatedNumberArrayCountMostRepeatedNumberWithDictionary()
         {
             RepeatedNumberArray.CountMostRepeatedNumberWithDictionary(new int[] { 3, 2, 1, 3, 7, 3 });
         }
 
-        [Benchmark(Description = "MergeArrays-Merge1")]
+        [Benchmark(Description = "MergeArrays Merge1")]
         public void MergeArraysMerge1()
         {
             MergeArrays.Merge1(new int[] { 1, 2, 3, 0, 0, 0 }, new int[] { 2, 5, 6 });
         }
 
-        [Benchmark(Description = "MergeArrays-Merge2")]
+        [Benchmark(Description = "MergeArrays Merge2")]
         public void MergeArraysMerge2()
         {
             MergeArrays.Merge2(new int[] { 1, 2, 3, 0, 0, 0 }, 3, new int[] { 2, 5, 6 }, 3);
+        }
+
+        [Benchmark(Description = "ArabicNumberToRomanNumeral ConvertExample1")]
+        public void ArabicNumberToRomanNumeralConvertExample1()
+        {
+            ArabicNumberToRomanNumeral.ConvertExample1(37);
+        }
+
+        [Benchmark(Description = "ArabicNumberToRomanNumeral ConvertExample2")]
+        public void ArabicNumberToRomanNumeralConvertExample2()
+        {
+            ArabicNumberToRomanNumeral.ConvertExample2(37);
         }
     }
 }
