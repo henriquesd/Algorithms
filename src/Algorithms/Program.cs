@@ -199,5 +199,17 @@ namespace Algorithms
         {
             ArabicNumberToRomanNumeral.ConvertExample2(37);
         }
+
+        [Benchmark(Description = "ConverTime Convert")]
+        public void ConverTimeConvert()
+        {
+            ConverTime.Convert("04:37:22PM");
+        }
+
+        [Benchmark(Description = "ConverTime ConvertToMilitaryTime")]
+        public void ConverTimeConvertToMilitaryTime()
+        {
+            ConverTime.ConvertToMilitaryTime("04:37:22PM");
+        }
     }
 }
