@@ -1,6 +1,6 @@
 ﻿namespace Algorithms
 {
-    public static class ConverTime
+    public static class ConvertTime
     {
         // Given a time in 12-hour AM/PM format, convert it to military (24-hour) time.
         // Ex.: "07:05:45PM" should be converted to "19:05:45";

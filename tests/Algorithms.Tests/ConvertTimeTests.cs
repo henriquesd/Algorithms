@@ -2,7 +2,7 @@
 
 namespace Algorithms.Tests
 {
-    public class ConverTimeTests
+    public class ConvertTimeTests
     {
         [Theory]
         [InlineData("07:05:45PM", "19:05:45")]
@@ -25,7 +25,7 @@ namespace Algorithms.Tests
             // Arrange
 
             // Act
-            var result = ConverTime.Convert(timeToConvert);
+            var result = ConvertTime.Convert(timeToConvert);
 
             // Assert
             Assert.Equal(expectedResult, result);
@@ -52,7 +52,7 @@ namespace Algorithms.Tests
             // Arrange
 
             // Act
-            var result = ConverTime.ConvertToMilitaryTime(timeToConvert);
+            var result = ConvertTime.ConvertToMilitaryTime(timeToConvert);
 
             // Assert
             Assert.Equal(expectedResult, result);

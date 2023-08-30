@@ -200,16 +200,16 @@ namespace Algorithms
             ArabicNumberToRomanNumeral.ConvertExample2(37);
         }
 
-        [Benchmark(Description = "ConverTime Convert")]
-        public void ConverTimeConvert()
+        [Benchmark(Description = "ConvertTime Convert")]
+        public void ConvertTimeConvert()
         {
-            ConverTime.Convert("04:37:22PM");
+            ConvertTime.Convert("04:37:22PM");
         }
 
-        [Benchmark(Description = "ConverTime ConvertToMilitaryTime")]
-        public void ConverTimeConvertToMilitaryTime()
+        [Benchmark(Description = "ConvertTime ConvertToMilitaryTime")]
+        public void ConvertTimeConvertToMilitaryTime()
         {
-            ConverTime.ConvertToMilitaryTime("04:37:22PM");
+            ConvertTime.ConvertToMilitaryTime("04:37:22PM");
         }
     }
 }
