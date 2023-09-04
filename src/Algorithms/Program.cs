@@ -211,5 +211,11 @@ namespace Algorithms
         {
             ConvertTime.ConvertToMilitaryTime("04:37:22PM");
         }
+
+        [Benchmark(Description = "RemoveElement Remove")]
+        public void RemoveElementRemove()
+        {
+            RemoveElement.Remove(new int[] { 0, 1, 2, 2, 3, 0, 4, 2 }, 2);
+        }
     }
 }
