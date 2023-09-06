@@ -229,5 +229,17 @@ namespace Algorithms
         {
             RemoveElement.Remove(new int[] { 0, 1, 2, 2, 3, 0, 4, 2 }, 2);
         }
+
+        [Benchmark(Description = "MajorityElement Find")]
+        public void MajorityElementFind()
+        {
+            MajorityElement.Find(new int[] { 3, 2, 3 });
+        }
+
+        [Benchmark(Description = "MajorityElement FindMajorityElement")]
+        public void MajorityElementFindMajorityElement()
+        {
+            MajorityElement.FindMajorityElement(new int[] { 3, 2, 3 });
+        }
     }
 }
