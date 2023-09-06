@@ -79,10 +79,22 @@ namespace Algorithms
             ReverseArray.ReverseArrayIntoNewArray(new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 });
         }
 
-        [Benchmark(Description = "ReverseInt")]
+        [Benchmark(Description = "ReverseInt Reverse")]
         public void RunReverseInt()
         {
             ReverseInt.Reverse(981);
+        }
+
+        [Benchmark(Description = "ReverseInt ReverseWithString")]
+        public void RunReverseIntReverseWithString()
+        {
+            ReverseInt.ReverseWithString(981);
+        }
+
+        [Benchmark(Description = "ReverseInt ReverseExample3")]
+        public void RunReverseIntReverseExample3()
+        {
+            ReverseInt.ReverseExample3(981);
         }
 
         [Benchmark(Description = "ReverseString")]
