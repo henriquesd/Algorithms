@@ -23,6 +23,15 @@ namespace Algorithms.Tests
             Assert.Equal(expectedResult, result);
         }
 
+        [Theory]
+        [MemberData(nameof(RomanNumberToIntegerData))]
+        public void ConvertWithoutDictionaryAndUsingSwitch_ShouldReturnCorrectNumber(string romanNumber, int expectedResult)
+        {
+            var result = RomanToInteger.ConvertWithoutDictionaryAndUsingSwitch(romanNumber);
+
+            Assert.Equal(expectedResult, result);
+        }
+
         public static IEnumerable<object[]> RomanNumberToIntegerData()
         {
             yield return new object[] { "", 0 };

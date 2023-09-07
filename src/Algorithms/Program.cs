@@ -253,5 +253,11 @@ namespace Algorithms
         {
             RomanToInteger.ConvertWithoutDictionary("LXXXVII");
         }
+
+        [Benchmark(Description = "RomanToInteger ConvertWithoutDictionaryAndUsingSwitch")]
+        public void RomanToIntegerConvertWithoutDictionaryAndUsingSwitch()
+        {
+            RomanToInteger.ConvertWithoutDictionaryAndUsingSwitch("LXXXVII");
+        }
     }
 }
