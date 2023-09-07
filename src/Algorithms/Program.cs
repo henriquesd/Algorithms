@@ -241,5 +241,11 @@ namespace Algorithms
         {
             MajorityElement.FindMajorityElement(new int[] { 3, 2, 3 });
         }
+
+        [Benchmark(Description = "RomanToInteger Convert")]
+        public void RomanToIntegerConvert()
+        {
+            RomanToInteger.Convert("LXXXVII");
+        }
     }
 }

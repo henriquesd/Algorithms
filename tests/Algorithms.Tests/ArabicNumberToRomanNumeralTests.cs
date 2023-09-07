@@ -127,8 +127,11 @@ namespace Algorithms.Tests
             yield return new object[] { 99, "XCIX" };
             yield return new object[] { 100, "C" };
             yield return new object[] { 101, "CI" };
+            yield return new object[] { 400, "CD" };
+            yield return new object[] { 900, "CM" };
             yield return new object[] { 1000, "M" };
             yield return new object[] { 1001, "MI" };
+            yield return new object[] { 1994, "MCMXCIV" };
             yield return new object[] { 2000, "MM" };
             yield return new object[] { 2004, "MMIV" };
             yield return new object[] { 3999, "MMMCMXCIX" };
