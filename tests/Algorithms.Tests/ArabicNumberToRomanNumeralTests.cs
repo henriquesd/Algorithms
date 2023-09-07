@@ -3,7 +3,7 @@ using Xunit;
 
 namespace Algorithms.Tests
 {
-     public class ArabicNumberToRomanNumeralTests
+    public class ArabicNumberToRomanNumeralTests
     {
         [Theory]
         [MemberData(nameof(ArabicToRomanTestData))]
