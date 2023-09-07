@@ -28,7 +28,6 @@ namespace Algorithms
 
             var romanNumeral = new StringBuilder();
 
-            var romain = new StringBuilder();
             while (arabicNumber > 0)
             {
                 foreach (var key in RomanLetters.Keys)
@@ -36,12 +35,12 @@ namespace Algorithms
                     if (arabicNumber >= key)
                     {
                         arabicNumber -= key;
-                        romain.Append(RomanLetters[key]);
+                        romanNumeral.Append(RomanLetters[key]);
                         break;
                     }
                 }
             }
-            return romain.ToString();
+            return romanNumeral.ToString();
         }
 
         public static string ConvertExample2(int arabicNumber)
