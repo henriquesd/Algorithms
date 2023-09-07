@@ -242,10 +242,16 @@ namespace Algorithms
             MajorityElement.FindMajorityElement(new int[] { 3, 2, 3 });
         }
 
-        [Benchmark(Description = "RomanToInteger Convert")]
+        [Benchmark(Description = "RomanToInteger ConvertWithDictionary")]
         public void RomanToIntegerConvert()
         {
-            RomanToInteger.Convert("LXXXVII");
+            RomanToInteger.ConvertWithDictionary("LXXXVII");
+        }
+
+        [Benchmark(Description = "RomanToInteger ConvertWithoutDictionary")]
+        public void RomanToIntegerConvertWithoutDictionary()
+        {
+            RomanToInteger.ConvertWithoutDictionary("LXXXVII");
         }
     }
 }

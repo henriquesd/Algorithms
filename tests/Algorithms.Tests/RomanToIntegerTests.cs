@@ -7,9 +7,18 @@ namespace Algorithms.Tests
     {
         [Theory]
         [MemberData(nameof(RomanNumberToIntegerData))]
-        public void Convert_ShouldReturnCorrectNumber(string romanNumber, int expectedResult)
+        public void ConvertWithDictionary_ShouldReturnCorrectNumber(string romanNumber, int expectedResult)
         {
-            var result = RomanToInteger.Convert(romanNumber);
+            var result = RomanToInteger.ConvertWithDictionary(romanNumber);
+
+            Assert.Equal(expectedResult, result);
+        }
+
+        [Theory]
+        [MemberData(nameof(RomanNumberToIntegerData))]
+        public void ConvertWithoutDictionary_ShouldReturnCorrectNumber(string romanNumber, int expectedResult)
+        {
+            var result = RomanToInteger.ConvertWithoutDictionary(romanNumber);
 
             Assert.Equal(expectedResult, result);
         }
