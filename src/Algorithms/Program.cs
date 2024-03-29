@@ -1,8 +1,8 @@
-﻿using BenchmarkDotNet.Attributes;
+﻿using Algorithms;
+using BenchmarkDotNet.Attributes;
 using BenchmarkDotNet.Mathematics;
 using BenchmarkDotNet.Order;
 using BenchmarkDotNet.Running;
-using Algorithms;
 
 BenchmarkRunner.Run<AlgorithmsProgram>();
 
@@ -258,6 +258,30 @@ namespace Algorithms
         public void RomanToIntegerConvertWithoutDictionaryAndUsingSwitch()
         {
             RomanToInteger.ConvertWithoutDictionaryAndUsingSwitch("LXXXVII");
+        }
+
+        [Benchmark(Description = "SumOneDimensionArray SumDemo1")]
+        public void SumOneDimensionArraySumDemo1()
+        {
+            SumOneDimensionArray.SumDemo1(new int[] { 1, 2, 3, 4 });
+        }
+
+        [Benchmark(Description = "SumOneDimensionArray SumDemo2")]
+        public void SumOneDimensionArraySumDemo2()
+        {
+            SumOneDimensionArray.SumDemo2(new int[] { 1, 2, 3, 4 });
+        }
+
+        [Benchmark(Description = "SumOneDimensionArray SumDemo3")]
+        public void SumOneDimensionArraySumDemo3()
+        {
+            SumOneDimensionArray.SumDemo3(new int[] { 1, 2, 3, 4 });
+        }
+
+        [Benchmark(Description = "SumOneDimensionArray SumDemoWithLinq")]
+        public void SumOneDimensionArraySumDemoWithLinq()
+        {
+            SumOneDimensionArray.SumDemoWithLinq(new int[] { 1, 2, 3, 4 });
         }
     }
 }
