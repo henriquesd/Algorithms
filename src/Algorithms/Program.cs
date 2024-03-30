@@ -325,5 +325,29 @@ namespace Algorithms
         {
             FizzBuzzDemo2.FizzBuzzExample4(15);
         }
+
+        [Benchmark(Description = "ReduceNumberToZero NumberOfStepsExample1")]
+        public void ReduceNumberToZeroNumberOfStepsExample1()
+        {
+            ReduceNumberToZero.NumberOfStepsExample1(123);
+        }
+
+        [Benchmark(Description = "ReduceNumberToZero NumberOfStepsExample2")]
+        public void ReduceNumberToZeroNumberOfStepsExample2()
+        {
+            ReduceNumberToZero.NumberOfStepsExample2(123);
+        }
+
+        [Benchmark(Description = "ReduceNumberToZero NumberOfStepsExample3")]
+        public void ReduceNumberToZeroNumberOfStepsExample3()
+        {
+            ReduceNumberToZero.NumberOfStepsExample3(123);
+        }
+
+        [Benchmark(Description = "ReduceNumberToZero NumberOfStepsBitwiseApproach")]
+        public void ReduceNumberToZeroNumberOfStepsBitwiseApproach()
+        {
+            ReduceNumberToZero.NumberOfStepsBitwiseApproach(123);
+        }
     }
 }
