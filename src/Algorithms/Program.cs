@@ -301,5 +301,29 @@ namespace Algorithms
         {
             RichestCustomerWealth.MaximumWealthWithLinq(new int[][] { new int[] { 2, 8, 7 }, new int[] { 1, 1, 3 }, new int[] { 1, 9, 10 } });
         }
+
+        [Benchmark(Description = "FizzBuzzDemo2 FizzBuzzExample1")]
+        public void FizzBuzzDemo2FizzBuzzExample1()
+        {
+            FizzBuzzDemo2.FizzBuzzExample1(15);
+        }
+
+        [Benchmark(Description = "FizzBuzzDemo2 FizzBuzzExample2")]
+        public void FizzBuzzDemo2FizzBuzzExample2()
+        {
+            FizzBuzzDemo2.FizzBuzzExample2(15);
+        }
+
+        [Benchmark(Description = "FizzBuzzDemo2 FizzBuzzExample3")]
+        public void FizzBuzzDemo2FizzBuzzExample3()
+        {
+            FizzBuzzDemo2.FizzBuzzExample3(15);
+        }
+
+        [Benchmark(Description = "FizzBuzzDemo2 FizzBuzzExample4")]
+        public void FizzBuzzDemo2FizzBuzzExample4()
+        {
+            FizzBuzzDemo2.FizzBuzzExample4(15);
+        }
     }
 }
