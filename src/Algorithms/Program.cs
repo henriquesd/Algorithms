@@ -283,5 +283,23 @@ namespace Algorithms
         {
             SumOneDimensionArray.SumDemoWithLinq(new int[] { 1, 2, 3, 4 });
         }
+
+        [Benchmark(Description = "RichestCustomerWealth MaximumWealthExample1")]
+        public void RichestCustomerWealthMaximumWealthExample1()
+        {
+            RichestCustomerWealth.MaximumWealthExample1(new int[][] { new int[] { 2, 8, 7 }, new int[] { 1, 1, 3 }, new int[] { 1, 9, 10 } });
+        }
+
+        [Benchmark(Description = "RichestCustomerWealth MaximumWealthExample2")]
+        public void RichestCustomerWealthMaximumWealthExample2()
+        {
+            RichestCustomerWealth.MaximumWealthExample2(new int[][] { new int[] { 2, 8, 7 }, new int[] { 1, 1, 3 }, new int[] { 1, 9, 10 } });
+        }
+
+        [Benchmark(Description = "RichestCustomerWealth MaximumWealthWithLinq")]
+        public void RichestCustomerWealthMaximumWealthWithLinq()
+        {
+            RichestCustomerWealth.MaximumWealthWithLinq(new int[][] { new int[] { 2, 8, 7 }, new int[] { 1, 1, 3 }, new int[] { 1, 9, 10 } });
+        }
     }
 }
