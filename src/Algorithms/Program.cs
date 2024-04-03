@@ -1,4 +1,9 @@
 ﻿using Algorithms;
+using Algorithms.Arrays;
+using Algorithms.BinarySearchs;
+using Algorithms.Mathematics;
+using Algorithms.Simulation;
+using Algorithms.Strings;
 using BenchmarkDotNet.Attributes;
 using BenchmarkDotNet.Mathematics;
 using BenchmarkDotNet.Order;

@@ -8,7 +8,7 @@ namespace Algorithms.Tests.LinkedLists
     {
         [Theory]
         [MemberData(nameof(ValuesToTest))]
-        public void MiddleNode_ShouldReturnsMiddleNode(ListNode listNode, ListNode middleOfLinkedList)
+        public void MiddleNode_ShouldReturnMiddleNode(ListNode listNode, ListNode middleOfLinkedList)
         {
             var result = MiddleLinkedList.MiddleNode(listNode);
 
