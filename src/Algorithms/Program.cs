@@ -349,5 +349,11 @@ namespace Algorithms
         {
             ReduceNumberToZero.NumberOfStepsBitwiseApproach(123);
         }
+
+        [Benchmark(Description = "MergeStringsAlternately MergeAlternately")]
+        public void MergeStringsAlternatelyMergeAlternately()
+        {
+            MergeStringsAlternately.MergeAlternately("ab", "pqrs");
+        }
     }
 }
