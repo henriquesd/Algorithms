@@ -360,5 +360,29 @@ namespace Algorithms
         {
             MergeStringsAlternately.MergeAlternately("ab", "pqrs");
         }
+
+        [Benchmark(Description = "IndexFirstOccurrence StrStrDemo1")]
+        public void IndexFirstOccurrenceStrStrDemo1()
+        {
+            IndexFirstOccurrence.StrStrDemo1("sadbutsad", "sad");
+        }
+
+        [Benchmark(Description = "IndexFirstOccurrence StrStrDemo2")]
+        public void IndexFirstOccurrenceStrStrDemo2()
+        {
+            IndexFirstOccurrence.StrStrDemo2("sadbutsad", "sad");
+        }
+
+        [Benchmark(Description = "IndexFirstOccurrence StrStrDemo3")]
+        public void IndexFirstOccurrenceStrStrDemo3()
+        {
+            IndexFirstOccurrence.StrStrDemo3("sadbutsad", "sad");
+        }
+
+        [Benchmark(Description = "IndexFirstOccurrence StrStrDemo4")]
+        public void IndexFirstOccurrenceStrStrDemo4()
+        {
+            IndexFirstOccurrence.StrStrDemo4("sadbutsad", "sad");
+        }
     }
 }
