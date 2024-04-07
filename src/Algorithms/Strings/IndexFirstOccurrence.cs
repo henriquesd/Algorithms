@@ -49,12 +49,13 @@
             return haystack.IndexOf(needle);
         }
 
+        // Sliding Window Approach:
         public static int StrStrDemo4(string haystack, string needle)
         {
             int haystackLength = haystack.Length;
             int needleLength = needle.Length;
 
-            for(int windowStart = 0; windowStart <= haystackLength - needleLength; windowStart++)
+            for (int windowStart = 0; windowStart <= haystackLength - needleLength; windowStart++)
             {
                 for (int i = 0; i < needleLength; i++)
                 {
@@ -62,13 +63,14 @@
                     {
                         break;
                     }
+                    
                     if (i == needleLength - 1)
                     {
                         return windowStart;
                     }
                 }
             }
-            
+
             return -1;
         }
     }

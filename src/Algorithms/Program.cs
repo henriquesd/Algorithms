@@ -36,10 +36,22 @@ namespace Algorithms
             FizzBuzz.ExecuteExample3(15);
         }
 
-        [Benchmark(Description = "Anagram")]
-        public void RunAnagram()
+        [Benchmark(Description = "Anagram 1")]
+        public void RunAnagram1()
         {
-            Anagram.AreAnagram("ana", "ana");
+            Anagram.IsAnagram1("ana", "ana");
+        }
+
+        [Benchmark(Description = "Anagram 2")]
+        public void RunAnagram2()
+        {
+            Anagram.IsAnagram2("ana", "ana");
+        }
+
+        [Benchmark(Description = "Anagram 3")]
+        public void RunAnagram3()
+        {
+            Anagram.IsAnagram3("ana", "ana");
         }
 
         [Benchmark(Description = "BinarySearch")]
