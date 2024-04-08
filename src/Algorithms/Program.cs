@@ -396,5 +396,36 @@ namespace Algorithms
         {
             IndexFirstOccurrence.StrStrDemo4("sadbutsad", "sad");
         }
+
+        [Benchmark(Description = "ValidParenthesisString Example 1")]
+        public void ValidParenthesisStringExample1()
+        {
+            ValidParenthesisString.CheckValidStringExample1("(*)");
+        }
+
+        [Benchmark(Description = "ValidParenthesisString Example 2")]
+        public void ValidParenthesisStringExample2()
+        {
+            ValidParenthesisString.CheckValidStringExample2("(*)");
+        }
+
+        [Benchmark(Description = "ValidParenthesisString Example 3")]
+        public void ValidParenthesisStringExample3()
+        {
+            ValidParenthesisString.CheckValidStringExample3("(*)");
+        }
+
+        [Benchmark(Description = "ValidParenthesisString Example 4")]
+        public void ValidParenthesisStringExample4()
+        {
+            ValidParenthesisString.CheckValidStringExample4("(*)");
+        }
+
+        [Benchmark(Description = "ValidParenthesisString Example 5")]
+        public void ValidParenthesisStringExample5()
+        {
+            ValidParenthesisString.CheckValidStringExample5("(*)");
+        }
+
     }
 }
