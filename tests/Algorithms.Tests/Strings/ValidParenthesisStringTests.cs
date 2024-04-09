@@ -67,6 +67,8 @@ namespace Algorithms.Tests.Strings
             yield return new object[] { "**", true };
             yield return new object[] { "(*)", true };
             yield return new object[] { "(((((*)))**", true };
+            yield return new object[] { "((((()(()()()*()(((((*)()*(**(())))))(())()())(((())())())))))))(((((())*)))()))(()((*()*(*)))(*)()", 
+                true };
             yield return new object[] { "())", false };
             yield return new object[] { "(()", false };
             yield return new object[] { "())", false };
@@ -74,7 +76,10 @@ namespace Algorithms.Tests.Strings
             yield return new object[] { ")*)", false };
             yield return new object[] { ")*", false };
             yield return new object[] { "*(", false };
-            yield return new object[] { "((()((()))(())()())*)(()(())()))()))))(((*(()(((()()(())()))*(())*)(()(()(()()()))()(()()()", false };
+            yield return new object[] { "((()((()))(())()())*)(()(())()))()))))(((*(()(((()()(())()))*(())*)(()(()(()()()))()(()()()", 
+                false };
+            yield return new object[] { "(((((*(()((((*((**(((()()*)()()()*((((**)())*)*)))))))(())(()))())((*()()(((()((()*(())*(()**)()(())"
+                , false };
         }
     }
 }
