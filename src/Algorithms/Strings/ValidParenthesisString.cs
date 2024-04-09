@@ -10,6 +10,7 @@
     /// </summary>
     public static class ValidParenthesisString
     {
+        // Using Two Stacks Approach
         public static bool CheckValidStringExample1(string text)
         {
             Stack<int> openBrackets = new Stack<int>();
