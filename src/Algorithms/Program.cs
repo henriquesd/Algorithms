@@ -1,5 +1,5 @@
 ﻿using Algorithms;
-using Algorithms.Simulation;
+using Algorithms.Arrays;
 using BenchmarkDotNet.Attributes;
 using BenchmarkDotNet.Mathematics;
 using BenchmarkDotNet.Order;
@@ -14,28 +14,34 @@ namespace Algorithms
     [MarkdownExporter]
     public class AlgorithmsProgram
     {
-        [Benchmark(Description = "Example 0")]
-        public void RunTimeNeededToBuyTicketsExample0()
+        [Benchmark(Description = "MoveZeroes 1")]
+        public void RunMoveZeroes1()
         {
-            TimeNeededToBuyTickets.TimeRequiredToBuyExample0(new int[] { 2, 3, 2 }, 2);
+            MoveZeroes.MoveZeroesExample1(new int[] { 0, 1, 0, 3, 12 });
         }
 
-        [Benchmark(Description = "Example 1")]
-        public void RunTimeNeededToBuyTicketsExample1()
+        [Benchmark(Description = "MoveZeroes 2")]
+        public void RunMoveZeroes2()
         {
-            TimeNeededToBuyTickets.TimeRequiredToBuyExample1(new int[] { 2, 3, 2 }, 2);
+            MoveZeroes.MoveZeroesExample2(new int[] { 0, 1, 0, 3, 12 });
         }
 
-        [Benchmark(Description = "Example 2")]
-        public void RunTimeNeededToBuyTicketsExample2()
+        [Benchmark(Description = "MoveZeroes 3")]
+        public void RunMoveZeroes3()
         {
-            TimeNeededToBuyTickets.TimeRequiredToBuyExample2(new int[] { 2, 3, 2 }, 2);
+            MoveZeroes.MoveZeroesExample3(new int[] { 0, 1, 0, 3, 12 });
         }
 
-        [Benchmark(Description = "Example 3")]
-        public void RunTimeNeededToBuyTicketsExample3()
+        [Benchmark(Description = "MoveZeroes 4")]
+        public void RunMoveZeroes4()
         {
-            TimeNeededToBuyTickets.TimeRequiredToBuyExample3(new int[] { 2, 3, 2 }, 2);
+            MoveZeroes.MoveZeroesExample1(new int[] { 0, 1, 0, 3, 12 });
+        }
+
+        [Benchmark(Description = "MoveZeroes 5")]
+        public void RunMoveZeroes5()
+        {
+            MoveZeroes.MoveZeroesExample5(new int[] { 0, 1, 0, 3, 12 });
         }
     }
 }
