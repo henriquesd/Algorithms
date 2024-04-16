@@ -1,9 +1,10 @@
 ﻿using Algorithms;
-using Algorithms.Arrays;
+using Algorithms.BinarySearchs.BinaryTree;
 using BenchmarkDotNet.Attributes;
 using BenchmarkDotNet.Mathematics;
 using BenchmarkDotNet.Order;
 using BenchmarkDotNet.Running;
+using static Algorithms.BinarySearchs.BinaryTree.BinaryTreePreorderTraversal;
 
 BenchmarkRunner.Run<AlgorithmsProgram>();
 
@@ -14,34 +15,30 @@ namespace Algorithms
     [MarkdownExporter]
     public class AlgorithmsProgram
     {
-        [Benchmark(Description = "MoveZeroes 1")]
-        public void RunMoveZeroes1()
+        readonly TreeNode node = new TreeNode(1)
         {
-            MoveZeroes.MoveZeroesExample1(new int[] { 0, 1, 0, 3, 12 });
+            right = new TreeNode(2)
+            {
+                left = new TreeNode(3)
+            }
+        };
+
+        [Benchmark(Description = "PreorderTraversalExample1")]
+        public void PreorderTraversalExample1()
+        {
+            BinaryTreePreorderTraversal.PreorderTraversalExample1(node);
         }
 
-        [Benchmark(Description = "MoveZeroes 2")]
-        public void RunMoveZeroes2()
+        [Benchmark(Description = "PreorderTraversalExample2")]
+        public void PreorderTraversalExample2()
         {
-            MoveZeroes.MoveZeroesExample2(new int[] { 0, 1, 0, 3, 12 });
+            BinaryTreePreorderTraversal.PreorderTraversalExample2(node);
         }
 
-        [Benchmark(Description = "MoveZeroes 3")]
-        public void RunMoveZeroes3()
+        [Benchmark(Description = "PreorderTraversalExample3")]
+        public void PreorderTraversalExample3()
         {
-            MoveZeroes.MoveZeroesExample3(new int[] { 0, 1, 0, 3, 12 });
-        }
-
-        [Benchmark(Description = "MoveZeroes 4")]
-        public void RunMoveZeroes4()
-        {
-            MoveZeroes.MoveZeroesExample1(new int[] { 0, 1, 0, 3, 12 });
-        }
-
-        [Benchmark(Description = "MoveZeroes 5")]
-        public void RunMoveZeroes5()
-        {
-            MoveZeroes.MoveZeroesExample5(new int[] { 0, 1, 0, 3, 12 });
+            BinaryTreePreorderTraversal.PreorderTraversalExample3(node);
         }
     }
 }
