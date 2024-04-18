@@ -2,26 +2,43 @@
 {
     public static class BinaryTreePreorderTraversal
     {
-        public class TreeNode
+        // Recursive Approach - Depth-First Search (DFS):
+        // This is a type of depth-first traversal where we visit each node starting from the root node,
+        // then recursively visit the left subtree, and finally recursively visit the right subtree.
+        public static IList<int> RecursiveApproach(TreeNode root)
         {
-            public int val;
-            public TreeNode left;
-            public TreeNode right;
-            public TreeNode(int val = 0, TreeNode left = null, TreeNode right = null)
-            {
-                this.val = val;
-                this.left = left;
-                this.right = right;
-            }
+            List<int> result = new List<int>();
+
+            // Call the helper function to perform the preorder traversal recursively
+            Preorder(root, result);
+
+            return result;
+        }
+
+        private static void Preorder(TreeNode node, List<int> result)
+        {
+            if (node == null) return;
+
+            // Visit the current node (root) and add its value to the result list
+            result.Add(node.val);
+
+            // Recursively traverse the left subtree
+            Preorder(node.left, result);
+
+            // Recursively traverse the right subtree
+            Preorder(node.right, result);
         }
 
         // Iterations Approach:
         // Start from the root and then at each iteration pop the current node out of the stack and push its child nodes.
         // In the implemented strategy we push nodes into the output list following the order Top->Bottom and Left->Right,
         // which naturally reproduces preorder traversal.
-        public static IList<int> PreorderTraversalExample1(TreeNode root)
+        public static IList<int> IterationsApproach(TreeNode root)
         {
+            // Initialize a stack to store nodes that need to be processed
             var stack = new Stack<TreeNode>();
+
+            // Initialize a list to store the preorder traversal result
             var output = new List<int>();
 
             if (root == null)
@@ -56,14 +73,14 @@
             return output;
         }
 
-        // Morris traversal Approach:
+        // Morris Traversal Approach:
         // The idea is to go down from the node to its predecessor, and each predecessor will be visited twice.
         // For this go one step left if possible and then always right till the end.
         // When we visit a leaf (node's predecessor) first time, it has a zero right child,
         // so we update output and establish the pseudo link predecessor.right = root to mark the fact the predecessor is visited.
         // When we visit the same predecessor the second time, it already points to the current node,
         // thus we remove the pseudo link and move right to the next node.
-        public static IList<int> PreorderTraversalExample2(TreeNode root)
+        public static IList<int> MorisTraversalApproach(TreeNode root)
         {
             var output = new List<int>();
             TreeNode node = root;
@@ -109,24 +126,6 @@
 
             // Return the preorder traversal output
             return output;
-        }
-
-        // Depth-First Search (DFS) Approach:
-        // This is a type of depth-first traversal where we visit each node starting from the root node,
-        // then recursively visit the left subtree, and finally recursively visit the right subtree.
-        public static IList<int> PreorderTraversalExample3(TreeNode root)
-        {
-            List<int> result = new List<int>();
-            Preorder(root, result);
-            return result;
-        }
-
-        private static void Preorder(TreeNode node, List<int> result)
-        {
-            if (node == null) return;
-            result.Add(node.val); // Visit the root node and add its value to the result list
-            Preorder(node.left, result); // Recursively traverse the left subtree
-            Preorder(node.right, result); // Recursively traverse the right subtree
         }
     }
 }

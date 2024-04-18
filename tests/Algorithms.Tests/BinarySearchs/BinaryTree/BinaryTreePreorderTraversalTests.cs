@@ -1,7 +1,6 @@
 ﻿using Algorithms.BinarySearchs.BinaryTree;
 using System.Collections.Generic;
 using Xunit;
-using static Algorithms.BinarySearchs.BinaryTree.BinaryTreePreorderTraversal;
 
 namespace Algorithms.Tests.BinarySearchs.BinaryTree
 {
@@ -9,10 +8,10 @@ namespace Algorithms.Tests.BinarySearchs.BinaryTree
     {
         [Theory]
         [MemberData(nameof(ValuesToTest))]
-        public void PreorderTraversalExample1_ReturnExpectedResult(TreeNode root, List<int> expectedValue)
+        public void RecursiveApproach_ReturnExpectedResult(TreeNode root, List<int> expectedValue)
         {
             // Act
-            var result = BinaryTreePreorderTraversal.PreorderTraversalExample1(root);
+            var result = BinaryTreePreorderTraversal.RecursiveApproach(root);
 
             // Assert
             Assert.Equal(expectedValue, result);
@@ -20,10 +19,10 @@ namespace Algorithms.Tests.BinarySearchs.BinaryTree
 
         [Theory]
         [MemberData(nameof(ValuesToTest))]
-        public void PreorderTraversalExample2_ReturnExpectedResult(TreeNode root, List<int> expectedValue)
+        public void IterationsApproach_ReturnExpectedResult(TreeNode root, List<int> expectedValue)
         {
             // Act
-            var result = BinaryTreePreorderTraversal.PreorderTraversalExample2(root);
+            var result = BinaryTreePreorderTraversal.IterationsApproach(root);
 
             // Assert
             Assert.Equal(expectedValue, result);
@@ -31,10 +30,10 @@ namespace Algorithms.Tests.BinarySearchs.BinaryTree
 
         [Theory]
         [MemberData(nameof(ValuesToTest))]
-        public void PreorderTraversalExample3_ReturnExpectedResult(TreeNode root, List<int> expectedValue)
+        public void MorisTraversalApproach_ReturnExpectedResult(TreeNode root, List<int> expectedValue)
         {
             // Act
-            var result = BinaryTreePreorderTraversal.PreorderTraversalExample3(root);
+            var result = BinaryTreePreorderTraversal.MorisTraversalApproach(root);
 
             // Assert
             Assert.Equal(expectedValue, result);

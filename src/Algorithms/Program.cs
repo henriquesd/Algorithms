@@ -4,7 +4,6 @@ using BenchmarkDotNet.Attributes;
 using BenchmarkDotNet.Mathematics;
 using BenchmarkDotNet.Order;
 using BenchmarkDotNet.Running;
-using static Algorithms.BinarySearchs.BinaryTree.BinaryTreePreorderTraversal;
 
 BenchmarkRunner.Run<AlgorithmsProgram>();
 
@@ -23,22 +22,22 @@ namespace Algorithms
             }
         };
 
-        [Benchmark(Description = "PreorderTraversalExample1")]
-        public void PreorderTraversalExample1()
+        [Benchmark(Description = "Recursive Approach")]
+        public void RunRecursiveApproach()
         {
-            BinaryTreePreorderTraversal.PreorderTraversalExample1(node);
+            BinaryTreePreorderTraversal.RecursiveApproach(node);
         }
 
-        [Benchmark(Description = "PreorderTraversalExample2")]
-        public void PreorderTraversalExample2()
+        [Benchmark(Description = "Iterations Approach")]
+        public void RunIterationsApproach()
         {
-            BinaryTreePreorderTraversal.PreorderTraversalExample2(node);
+            BinaryTreePreorderTraversal.IterationsApproach(node);
         }
 
-        [Benchmark(Description = "PreorderTraversalExample3")]
-        public void PreorderTraversalExample3()
+        [Benchmark(Description = "Moris Traversal Approach")]
+        public void RunMorisTraversalApproach()
         {
-            BinaryTreePreorderTraversal.PreorderTraversalExample3(node);
+            BinaryTreePreorderTraversal.MorisTraversalApproach(node);
         }
     }
 }
