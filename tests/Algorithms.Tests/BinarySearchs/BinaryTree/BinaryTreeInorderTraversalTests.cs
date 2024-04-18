@@ -129,6 +129,29 @@ namespace Algorithms.Tests.BinarySearchs.BinaryTree
                 new TreeNode(0),
                 new List<int> { 0 }
             };
+
+            // Test 7: Tree with nodes [1, 2, 3, 4, 5, 6, null]
+            //       1
+            //     /   \
+            //    2     3
+            //   / \   / 
+            //  4   5 6
+            yield return new object[]
+            {
+                new TreeNode(1)
+                {
+                    left = new TreeNode(2)
+                    {
+                        left = new TreeNode(4),
+                        right = new TreeNode(5)
+                    },
+                    right = new TreeNode(3)
+                    {
+                        left = new TreeNode(6)
+                    }
+                },
+                new List<int> { 4, 2, 5, 1, 6, 3 }
+             };
         }
     }
 }
