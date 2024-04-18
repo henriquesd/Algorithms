@@ -111,15 +111,24 @@
                     // If the predecessor's right child is null, link it to the current node and move to the left child
                     if (predecessor.right == null)
                     {
-                        output.Add(node.val); // Add the value of the current node to the output list
-                        predecessor.right = node; // Link the predecessor's right child to the current node
-                        node = node.left; // Move to the left child
+                        // Add the value of the current node to the output list
+                        output.Add(node.val);
+
+                        // Link the predecessor's right child to the current node
+                        predecessor.right = node;
+
+                        // Move to the left child
+                        node = node.left;
                     }
                     else
                     {
                         // If the predecessor's right child is not null, unlink it and move to the right child
-                        predecessor.right = null; // Unlink the predecessor's right child
-                        node = node.right; // Move to the right child
+                        
+                        // Unlink the predecessor's right child
+                        predecessor.right = null;
+
+                        // Move to the right child
+                        node = node.right;
                     }
                 }
             }
