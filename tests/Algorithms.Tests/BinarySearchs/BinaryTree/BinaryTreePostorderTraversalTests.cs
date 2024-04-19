@@ -4,14 +4,14 @@ using Xunit;
 
 namespace Algorithms.Tests.BinarySearchs.BinaryTree
 {
-    public class BinaryTreePreorderTraversalTests
+    public class BinaryTreePostorderTraversalTests
     {
         [Theory]
         [MemberData(nameof(ValuesToTest))]
         public void RecursiveApproach_ReturnExpectedResult(TreeNode root, List<int> expectedValue)
         {
             // Act
-            var result = BinaryTreePreorderTraversal.RecursiveApproach(root);
+            var result = BinaryTreePostorderTraversal.RecursiveApproach(root);
 
             // Assert
             Assert.Equal(expectedValue, result);
@@ -22,18 +22,7 @@ namespace Algorithms.Tests.BinarySearchs.BinaryTree
         public void IterativeApproach_ReturnExpectedResult(TreeNode root, List<int> expectedValue)
         {
             // Act
-            var result = BinaryTreePreorderTraversal.IterativeApproach(root);
-
-            // Assert
-            Assert.Equal(expectedValue, result);
-        }
-
-        [Theory]
-        [MemberData(nameof(ValuesToTest))]
-        public void MorisTraversalApproach_ReturnExpectedResult(TreeNode root, List<int> expectedValue)
-        {
-            // Act
-            var result = BinaryTreePreorderTraversal.MorisTraversalApproach(root);
+            var result = BinaryTreePostorderTraversal.IterativeApproach(root);
 
             // Assert
             Assert.Equal(expectedValue, result);
@@ -56,7 +45,7 @@ namespace Algorithms.Tests.BinarySearchs.BinaryTree
                         left = new TreeNode(3)
                     }
                 },
-                new List<int> { 1, 2, 3 }
+                new List<int> { 3, 2, 1 }
             };
 
             // Test 2: Empty tree
@@ -90,7 +79,7 @@ namespace Algorithms.Tests.BinarySearchs.BinaryTree
                         right = new TreeNode(5)
                     }
                 },
-                new List<int> { 1, 2, 3, 4, 5 }
+                new List<int> { 2, 4, 5, 3, 1 }
             };
 
             // Test 5: Tree with nodes [1,null,2,null,3,null,4,null,5]
@@ -118,7 +107,7 @@ namespace Algorithms.Tests.BinarySearchs.BinaryTree
                         }
                     }
                 },
-                new List<int> { 1, 2, 3, 4, 5 }
+                new List<int> { 5, 4, 3, 2, 1 }
              };
 
             // Test 6: Tree with a single node having value 0
@@ -149,7 +138,7 @@ namespace Algorithms.Tests.BinarySearchs.BinaryTree
                         left = new TreeNode(6)
                     }
                 },
-                new List<int> { 1, 2, 4, 5, 3, 6 }
+                new List<int> { 4, 5, 2, 6, 3, 1 }
              };
 
             // Test 8: Tree with nodes [2,null,3,null,1]
@@ -167,7 +156,7 @@ namespace Algorithms.Tests.BinarySearchs.BinaryTree
                         right = new TreeNode(1)
                     }
                 },
-                new List<int> { 2, 3, 1 }
+                new List<int> { 1, 3, 2 }
             };
         }
     }

@@ -39,7 +39,6 @@ namespace Algorithms.Tests.BinarySearchs.BinaryTree
             Assert.Equal(expectedValue, result);
         }
 
-
         public static IEnumerable<object[]> ValuesToTest()
         {
             // Test 1: Tree with nodes [1,null,2,3]
@@ -91,7 +90,7 @@ namespace Algorithms.Tests.BinarySearchs.BinaryTree
                         right = new TreeNode(5)
                     }
                 },
-                new List<int> { 2, 1, 4, 3, 5}
+                new List<int> { 2, 1, 4, 3, 5 }
             };
 
             // Test 5: Tree with nodes [1,null,2,null,3,null,4,null,5]
@@ -152,6 +151,24 @@ namespace Algorithms.Tests.BinarySearchs.BinaryTree
                 },
                 new List<int> { 4, 2, 5, 1, 6, 3 }
              };
+
+            // Test 8: Tree with nodes [2,null,3,null,1]
+            //  2
+            //   \
+            //    3
+            //     \
+            //      1
+            yield return new object[]
+            {
+                new TreeNode(2)
+                {
+                    right = new TreeNode(3)
+                    {
+                        right = new TreeNode(1)
+                    }
+                },
+                new List<int> { 2, 3, 1 }
+            };
         }
     }
 }
