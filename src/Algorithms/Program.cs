@@ -28,10 +28,10 @@ namespace Algorithms
             BinaryTreePreorderTraversal.RecursiveApproach(node);
         }
 
-        [Benchmark(Description = "Iterations Approach")]
-        public void RunIterationsApproach()
+        [Benchmark(Description = "Iterative Approach using a Stack")]
+        public void RunIterativeApproach()
         {
-            BinaryTreePreorderTraversal.IterationsApproach(node);
+            BinaryTreePreorderTraversal.IterativeApproach(node);
         }
 
         [Benchmark(Description = "Moris Traversal Approach")]

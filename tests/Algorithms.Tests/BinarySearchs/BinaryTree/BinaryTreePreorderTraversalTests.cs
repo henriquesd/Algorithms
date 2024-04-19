@@ -19,10 +19,10 @@ namespace Algorithms.Tests.BinarySearchs.BinaryTree
 
         [Theory]
         [MemberData(nameof(ValuesToTest))]
-        public void IterationsApproach_ReturnExpectedResult(TreeNode root, List<int> expectedValue)
+        public void IterativeApproach_ReturnExpectedResult(TreeNode root, List<int> expectedValue)
         {
             // Act
-            var result = BinaryTreePreorderTraversal.IterationsApproach(root);
+            var result = BinaryTreePreorderTraversal.IterativeApproach(root);
 
             // Assert
             Assert.Equal(expectedValue, result);

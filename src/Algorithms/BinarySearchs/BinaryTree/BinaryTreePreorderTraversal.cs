@@ -29,11 +29,11 @@
             Preorder(node.right, result);
         }
 
-        // Iterations Approach:
+        // Iterative Approach using a Stack:
         // Start from the root and then at each iteration pop the current node out of the stack and push its child nodes.
         // In the implemented strategy we push nodes into the output list following the order Top->Bottom and Left->Right,
         // which naturally reproduces preorder traversal.
-        public static IList<int> IterationsApproach(TreeNode root)
+        public static IList<int> IterativeApproach(TreeNode root)
         {
             // Initialize a stack to store nodes that need to be processed
             var stack = new Stack<TreeNode>();

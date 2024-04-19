@@ -31,8 +31,8 @@
             }
         }
 
-        // Iterating method using Stack
-        public static IList<int> StackApproach(TreeNode root)
+        // Iterative approach using a Stack
+        public static IList<int> IterativeApproach(TreeNode root)
         {
             // Initialize a list to store the inorder traversal result
             List<int> res = new List<int>();
