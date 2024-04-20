@@ -34,10 +34,10 @@ namespace Algorithms
             BinaryTreePreorderTraversal.IterativeApproach(node);
         }
 
-        [Benchmark(Description = "Moris Traversal Approach")]
-        public void RunMorisTraversalApproach()
+        [Benchmark(Description = "Morris Traversal Approach")]
+        public void RunMorrisTraversalApproach()
         {
-            BinaryTreePreorderTraversal.MorisTraversalApproach(node);
+            BinaryTreePreorderTraversal.MorrisTraversalApproach(node);
         }
     }
 }

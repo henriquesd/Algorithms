@@ -80,7 +80,7 @@
         // so we update output and establish the pseudo link predecessor.right = root to mark the fact the predecessor is visited.
         // When we visit the same predecessor the second time, it already points to the current node,
         // thus we remove the pseudo link and move right to the next node.
-        public static IList<int> MorisTraversalApproach(TreeNode root)
+        public static IList<int> MorrisTraversalApproach(TreeNode root)
         {
             var output = new List<int>();
             TreeNode node = root;

@@ -30,10 +30,10 @@ namespace Algorithms.Tests.BinarySearchs.BinaryTree
 
         [Theory]
         [MemberData(nameof(ValuesToTest))]
-        public void MorisTraversalApproach_ReturnExpectedResult(TreeNode root, List<int> expectedValue)
+        public void MorrisTraversalApproach_ReturnExpectedResult(TreeNode root, List<int> expectedValue)
         {
             // Act
-            var result = BinaryTreePreorderTraversal.MorisTraversalApproach(root);
+            var result = BinaryTreePreorderTraversal.MorrisTraversalApproach(root);
 
             // Assert
             Assert.Equal(expectedValue, result);
