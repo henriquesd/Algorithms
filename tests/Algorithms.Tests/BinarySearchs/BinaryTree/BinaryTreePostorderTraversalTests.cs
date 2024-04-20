@@ -28,6 +28,17 @@ namespace Algorithms.Tests.BinarySearchs.BinaryTree
             Assert.Equal(expectedValue, result);
         }
 
+        [Theory]
+        [MemberData(nameof(ValuesToTest))]
+        public void MorrisTraversalApproach_ReturnExpectedResult(TreeNode root, List<int> expectedValue)
+        {
+            // Act
+            var result = BinaryTreePostorderTraversal.MorrisTraversalApproach(root);
+
+            // Assert
+            Assert.Equal(expectedValue, result);
+        }
+
         public static IEnumerable<object[]> ValuesToTest()
         {
             // Test 1: Tree with nodes [1,null,2,3]

@@ -68,5 +68,71 @@
 
             return result;
         }
+
+        // Morris Traversal
+        public static IList<int> MorrisTraversalApproach(TreeNode root)
+        {
+            // Create a list to store the postorder traversal result
+            var output = new List<int>();
+
+            // Initialize the current node as the root of the tree
+            TreeNode node = root;
+
+            // Traverse the tree until the current node is not null
+            while (node != null)
+            {
+                if (node.right == null)
+                {
+                    // If the current node has no right child, process the current node
+
+                    // Add the value of the current node to the output list
+                    output.Add(node.val);
+
+                    // Move to the left child of the current node
+                    node = node.left;
+                }
+                else
+                {
+                    // If the current node has a right child
+
+                    // Find the inorder successor of the current node
+                    TreeNode successor = node.right;
+
+                    while (successor.left != null && successor.left != node)
+                    {
+                        // Traverse to the leftmost node of the right subtree
+                        successor = successor.left;
+                    }
+
+                    if (successor.left == null)
+                    {
+                        // If the successor's left child is null, link it to the current node and move to the right child
+                        // This indicates that we haven't visited the right subtree yet
+                        successor.left = node;
+
+                        // Add the value of the current node to the output list
+                        output.Add(node.val);
+
+                        // Move to the right child
+                        node = node.right;
+                    }
+                    else
+                    {
+                        // If the successor's left child is not null, unlink it and process the current node
+                        // This indicates that we have already visited the right subtree
+                        successor.left = null;
+
+                        // Move to the left child
+                        node = node.left;
+                    }
+                }
+            }
+
+            // Reverse the output to get the postorder traversal
+            output.Reverse();
+
+            // Return the postorder traversal result
+            return output;
+        }
     }
 }

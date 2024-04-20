@@ -103,6 +103,7 @@
 
                     // Find the predecessor of the current node
                     TreeNode predecessor = node.left;
+
                     while (predecessor.right != null && predecessor.right != node)
                     {
                         predecessor = predecessor.right;
