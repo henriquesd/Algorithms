@@ -8,21 +8,25 @@
     {
         public static int[] MoveZeroesExample1(int[] nums)
         {
+            // Initialize a writer pointer that will keep track of the position to write the next non-zero element;
             int writer = 0;
 
+            // Iterate through the array with the reader pointer;
             for (int reader = 0; reader < nums.Length; reader++)
             {
+                // If the current element is not zero;
                 if (nums[reader] != 0)
                 {
-                    // Move the non-zero element to the position pointed by the writer
+                    // Move the non-zero element to the position indicated by the writer pointer;
                     nums[writer] = nums[reader];
-                    
-                    // Increment the writer to the next position
+
+                    // Increment the writer pointer to the next position;
                     writer++;
                 }
             }
 
-            // Fill the remaining elements with zeros
+            // After all non-zero elements have been moved to the front,
+            // fill the remaining positions in the array with zeros;
             while (writer < nums.Length)
             {
                 nums[writer] = 0;

@@ -55,10 +55,13 @@ namespace Algorithms.Tests.Arrays
         {
             yield return new object[] { new int[] { 0, 1, 0, 3, 12 }, new int[] { 1, 3, 12, 0, 0 } };
             yield return new object[] { new int[] { 1, 2, 3, 4, 5 }, new int[] { 1, 2, 3, 4, 5 } };
+            yield return new object[] { new int[] { 1, 2, 3, 0, 0 }, new int[] { 1, 2, 3, 0, 0 } };
+            yield return new object[] { new int[] { 0, 0, 1, 2, 3 }, new int[] { 1, 2, 3, 0, 0 } };
+            yield return new object[] { new int[] { 1, 0, 2, 0, 3 }, new int[] { 1, 2, 3, 0, 0 } };
             yield return new object[] { new int[] { 0 }, new int[] { 0 } };
-            yield return new object[] { new int[] { 0, 0 }, new int[] { 0, 0 } };
-            yield return new object[] { new int[] { 1, 0 }, new int[] { 1, 0 } };
-            yield return new object[] { new int[] { 0, 1 }, new int[] { 1, 0 } };
+            yield return new object[] { new int[] { 1 }, new int[] { 1 } };
+            yield return new object[] { new int[] { 0, 0, 0, 0, 0 }, new int[] { 0, 0, 0, 0, 0 } };
+            yield return new object[] { new int[] {  }, new int[] { } };
         }
     }
 }
