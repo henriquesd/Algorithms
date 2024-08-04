@@ -45,9 +45,12 @@ namespace Algorithms.Tests.Strings
         public static IEnumerable<object[]> ValuesToTest()
         {
             yield return new object[] { "sadbutsad", "sad", 0 };
-            yield return new object[] { "leetcode", "leeto", -1 };
             yield return new object[] { "hello", "ll", 2 };
+            yield return new object[] { "aaaaa", "bba", -1 };
+            yield return new object[] { "mississippi", "issip", 4 };
+            yield return new object[] { "abcdef", "def", 3 };
             yield return new object[] { "abc", "c", 2 };
+            yield return new object[] { "abcdef", "xyz", -1 };
         }
     }
 }
